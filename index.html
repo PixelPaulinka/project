@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проект: Анализ эмоций в текстах</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/theme/white.min.css">
+    <style>
+	
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f5f5f5;
+            color: #333;
+        }
+
+        /* Стили для слайдов */
+        .reveal .slides {
+            text-align: left;
+            padding: 20px;
+        }
+
+        .reveal h1, .reveal h2, .reveal h3 {
+            color: #6a11cb;
+            margin-bottom: 20px;
+        }
+
+        .reveal p, .reveal li {
+            font-size: 24px;
+            line-height: 1.5;
+            color: #444;
+        }
+
+        .reveal ul, .reveal ol {
+            margin-left: 40px;
+        }
+
+        .reveal img {
+            max-width: 80%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Стили для таблицы */
+        .reveal table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .reveal th, .reveal td {
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        .reveal th {
+            background: #6a11cb;
+            color: #fff;
+        }
+
+        .reveal td {
+            background: #f9f9f9;
+            color: #333;
+        }
+
+        /* Стили для ресурсов */
+        .resources {
+            margin-top: 30px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .resources a {
+            color: #6a11cb;
+            text-decoration: none;
+        }
+
+        .resources a:hover {
+            text-decoration: underline;
+        }
+    /* Стили для счетчика слайдов */
+    .slides .slide-number {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        font-size: 18px;
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        padding: 10px 15px;
+        border-radius: 5px;
+        font-family: 'Arial', sans-serif;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+    }
+
+    /* Убираем дефолтный счетчик Reveal.js */
+    .reveal .slide-number {
+        display: none;
+    }
+        /* Адаптивные стили */
+        @media (max-width: 768px) {
+            .reveal p, .reveal li {
+                font-size: 20px;
+            }
+
+            .reveal th, .reveal td {
+                font-size: 18px;
+                padding: 10px;
+            }
+
+            .reveal img {
+                max-width: 100%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="reveal">
+        <div class="slides">
+<section>
+<div class="project">
+    <h3>Анализ восприятия искусственным интеллектом различных эмоций в текстах разных жанров и стилей<a href="https://pixelpaulinka.github.io/project_site/index.html" target="_blank">.</a></h3>
+</div>
+</section>
+            <section>
+                <h2>Актуальность проекта</h2>
+                <p>Искусственный интеллект (ИИ) активно применяется для анализа текстов, включая распознавание эмоций, иронию и средства выразительности. Однако, несмотря на достижения, ИИ всё ещё может ошибаться, особенно при сложных контекстах, таких как сарказм или скрытые смыслы.</p>
+
+                <h3>Почему это важно?</h3>
+                <ul>
+                    <li><strong>Ошибки ИИ:</strong> ИИ может не понять сарказм или скрытые смыслы, что снижает точность анализа текстов.</li>
+                    <li><strong>Субъективность восприятия:</strong> Люди воспринимают эмоции по-разному, в зависимости от опыта и настроения.</li>
+                    <li><strong>Практическое применение:</strong> Результаты исследования могут быть использованы для улучшения чат-ботов, образовательных программ и других технологий ИИ.</li>
+                </ul>
+            </section>
+<section>
+    <div class="goal">
+        <h3>Цель</h3>
+        <p>
+            Создание программы искусственного интеллекта для различения различных эмоций в текстах разных жанров и стилей.
+        </p>
+    </div>
+</section>
+<section>
+    <div class="tasks">
+        <h3>Задачи</h3>
+        <ul>
+            <li>Изучение основных концепций, алгоритмов и ключевых понятий, которые лежат в основе искусственного интеллекта.</li>
+            <li>Подбор небольших текстов разных жанров и стилей.</li>
+            <li>Создание программы и использование искусственного интеллекта для анализа текстов.</li>
+        </ul>
+    </div>
+</section>
+
+            <!-- Слайд 1: Введение -->
+
+            <!-- Слайд 2: Этапы проекта -->
+            <section>
+                <h2>Этапы проекта</h2>
+                <ol>
+				    <li><strong>Подбор текстов:</strong>Подобрал тексты различных жанров и стилей</li>
+                    <li><strong>Изучение основ ИИ:</strong>Изучил машинное обучение, NLP и библиотеки Python (NLTK, spaCy).</li>
+                    <li><strong>Создание первой версии:</strong> Программа анализировала тексты по ключевым словам.</li>
+                    <li><strong>Улучшение с помощью BERT:</strong> Использовал модель BERT для более точного анализа.</li>
+                    <li><strong>Веб-версия:</strong> Создал сайт с удобным интерфейсом для анализа текстов.</li>
+                </ol>
+                <p><strong>Результат:</strong> Программа теперь может анализировать тексты с учетом контекста и стиля.</p>
+            </section>
+
+            <!-- Слайд 3: Версия 1 (Ключевые слова) -->
+            <section>
+                <h2>Версия 1: Поиск ключевых слов</h2>
+                <p><strong>Как работает:</strong> Программа ищет слова из списка (например, "радость", "грусть") и считает их частоту.</p>
+            </section>
+
+            <!-- Слайд 4: Версия 2 (BERT) -->
+            <section>
+<h2>Версия 2: Использование BERT</h2>
+<p><strong>Как работает:</strong> Программа отправляет текст в модель BERT, которая анализирует контекст и определяет эмоции <a href="https://pixelpaulinka.github.io/astridemo.." target="_blank">.</a></p>
+
+            </section>
+
+            <!-- Слайд 5: Версия 3 (Веб-сайт) -->
+            <section>
+                <h2>Версия 3: Веб-сайт с ИИ</h2>
+                <p><strong>Как работает:</strong> Пользователь вводит текст на сайте, ИИ анализирует его и выдает подробный отчет<a href="https://pixelpaulinka.github.io/astridemo.." target="_blank">.</a>
+
+            </section>
+
+            <!-- Слайд 6: Сравнение версий -->
+            <section>
+                <h2>Сравнение версий</h2>
+            </section>
+
+            <section>
+                <h3>Итог:</h3>
+<p>Проект показал, что искусственный интеллект способен анализировать эмоции в текстах, но его точность зависит от качества обучения и используемых алгоритмов. Однако остаются ограничения, связанные с пониманием контекста, иронии и скрытых смыслов, что требует дальнейшего совершенствования алгоритмов.В будущем можно улучшить программу, добавив более сложные модели машинного обучения, такие как GPT, для более точного анализа эмоций и контекста.</p>
+            </section>
+
+            <!-- Слайд 8: Ресурсы и курсы -->
+<section>
+    <div class="conclusion">
+        <h3>Заключение</h3>
+        <p>
+            В ходе работы над проектом была создана программа для анализа эмоций в текстах с использованием ИИ.
+            Благодарю моего руководителя за поддержку, а также разработчиков инструментов, таких как Python, SpaCy, NLTK,
+            HTML, CSS, JavaScript, BERT и LLaMA, которые сделали этот проект возможным.
+        </p>
+    </div>
+ </section>	
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.3.1/reveal.min.js"></script>
+<script>
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        center: true,
+        hash: true,
+        transition: 'slide',
+        
+        // Включаем отображение счетчика слайдов
+        slideNumber: 'c/t', // 'c/t' - это формат "Текущий слайд/Общее количество слайдов"
+    });
+</script>
+
+</body>
+</html>
